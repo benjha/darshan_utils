@@ -1,7 +1,7 @@
 
 FROM fedora:29 as build
 
-ARG DARSHAN_VER=3.1.6
+ARG DARSHAN_VER=3.1.7
 
 # We specify gcc and make dependencies because we will uninstall them after
 # the compilation of darshan. Make sure they are the latest packages installed.
