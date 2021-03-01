@@ -5,7 +5,6 @@ ARG DARSHAN_VER=3.1.7
 
 # We specify gcc and make dependencies because we will uninstall them after
 # the compilation of darshan. Make sure they are the latest packages installed.
-RUN apt update
 RUN dnf install -y \
         gcc \
             libgcc libxcrypt binutils cpp kernel-headers libgomp glibc-devel \
