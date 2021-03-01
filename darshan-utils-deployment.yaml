@@ -18,26 +18,18 @@ spec:
     spec:
       containers:
         - name: darshan-utils
-          image: image-registry.openshift-image-registry.svc:5000/gen150-app/iipimage
-          command: ['/bin/sh','-c']
-          args: ['./run_iipsrv.sh'] 
+          image: image-registry.openshift-image-registry.svc:5000/gen119blazingsql/darshanutils
+          command: ['/bin/bash','-c']
           env:
-            - name: CA_IIP_ROOT
-              value: /gpfs/alpine/proj-shared/gen150/caMicroscope/apache2
-          ports:
-            - name: ca-iip-apache
-              containerPort: 80
-            - name: ca-iip-port
-              containerPort: 8080
-            - name: ca-iip-utils
-              containerPort: 8443
+            - name: PROJWORK
+              value: /gpfs/alpine/proj-shared
           resources:
             limits:
-              cpu: '4'
-              memory: 8Gi
+              cpu: '2'
+              memory: 4Gi
             requests:
-              cpu: '4'
-              memory: 8Gi
+              cpu: '2'
+              memory: 4Gi
           stdin: true
       restartPolicy: Always
 status: {}
