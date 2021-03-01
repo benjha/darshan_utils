@@ -1,5 +1,5 @@
 
-FROM fedora:29 as build
+FROM fedora:29
 
 ARG DARSHAN_VER=3.1.7
 
