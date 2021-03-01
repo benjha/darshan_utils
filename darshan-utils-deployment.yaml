@@ -19,7 +19,7 @@ spec:
       containers:
         - name: darshan-utils
           image: image-registry.openshift-image-registry.svc:5000/gen119blazingsql/darshanutils
-          command: ['/bin/bash','-c']
+          command: ['/bin/bash']
           env:
             - name: PROJWORK
               value: /gpfs/alpine/proj-shared
